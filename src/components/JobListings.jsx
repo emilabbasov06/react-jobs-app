@@ -11,9 +11,7 @@ function JobListings(props) {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const API_URL = isHome
-        ? 'https://bright-righteous-dinosaur.glitch.me/jobs?_limit=3'
-        : 'https://bright-righteous-dinosaur.glitch.me/jobs';
+      const API_URL = isHome ? '/api/jobs?_limit=3' : '/api/jobs';
 
       try {
         const res = await fetch(API_URL);
